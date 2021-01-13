@@ -1,0 +1,32 @@
+Utilisation de la pagination 8
+Ensuite, dirigez-vous vers le fichier app / Providers / AppServiceProvider.php et importez et utilisez Paginator :: useBootstrap () dans la méthode boot ():
+
+<? php
+
+espace de noms App \ Providers;
+utilisez Illuminate \ Support \ ServiceProvider;
+
+utilisez Illuminate \ Pagination \ Paginator;
+
+La classe AppServiceProvider étend ServiceProvider
+{
+    / **
+     * Enregistrez tous les services d'application.
+     *
+     * @return void
+     * /
+    registre des fonctions publiques ()
+    {
+        //
+    }
+
+    / **
+     * Bootstrap tous les services d'application.
+     *
+     * @return void
+     * /
+    public function boot ()
+    {
+        Paginator :: useBootstrap ();
+    }
+}
