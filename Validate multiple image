@@ -1,0 +1,6 @@
+        $request->validate([
+            'titre' => 'required|string|min:3|max:255',
+            'description' => 'required|string',
+            'image' => 'required',
+            'image.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+        ]);
